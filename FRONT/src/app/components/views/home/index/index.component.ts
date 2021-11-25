@@ -1,9 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { ItemVenda } from "src/app/models/item-venda";
-import { Compromisso } from "src/app/models/compromisso";
 import { ItemVendaService } from "src/app/services/item-venda.service";
 import { CompromissoService } from "src/app/services/compromisso.service";
+import { Compromisso } from "src/app/models/compromisso";
 
 @Component({
     selector: "app-index",
@@ -28,9 +28,9 @@ export class IndexComponent implements OnInit {
     adicionar(compromissos: Compromisso): void {
         let item: ItemVenda = {
             compromisso: compromissos,
-            compromissosId: compromissos.id!,
-            quantidade: 1,
-            carrinhoId: localStorage.getItem("carrinhoId")! || "",
+            compromissoId: compromissos.id!,
+            //quantidade: 1,
+            //carrinhoId: localStorage.getItem("carrinhoId")! || "",
         };
         this.itemService.create(item).subscribe((item) => {
             localStorage.setItem("carrinhoId", item.carrinhoId!);

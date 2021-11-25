@@ -20,7 +20,7 @@
             <mat-label for="importancia">Importância:</mat-label>
             <mat-select name="importancia" [(ngModel)]="importanciaId">
                 <mat-option
-                    *ngFor="let importancia of importancias"
+                    *ngFor="let importancia of importancia"
                     value="{{ importancia.id }}"
                 >
                     {{ importancia.nome }}
@@ -28,7 +28,7 @@
             </mat-select>
         </mat-form-field>
     </mat-card-content>
-    <button mat-raised-button color="warn" (click)="cadastrar()">
+    <button mat-raised-button color="warn" (click)="alterar()">
         Cadastrar
     </button>
 </mat-card>

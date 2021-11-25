@@ -1,14 +1,19 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { IndexComponent } from "./components/views/home/index/index.component";
-import { CadastrarCompromissoComponent } from "./components/views/produto/cadastrar-produto/cadastrar-produto.component";
-import { ListarcompromissoComponent } from "./components/views/produto/listar-produto/listar-compromisso.component";
+import { CadastrarCompromissoComponent } from "./components/views/compromisso/cadastrar-compromisso/cadastrar-compromisso.component";
+import { ListarcompromissoComponent } from "./components/views/compromisso/listar-compromisso/listar-compromisso.component";
+import { AlterarCompromissoComponent } from "./components/views/compromisso/alterar-compromisso/alterar-compromisso.component";
 
 
 const routes: Routes = [
     {
         path: "",
         component: IndexComponent,
+    },
+    {
+        path: "compromisso/alterar",
+        component: AlterarCompromissoComponent,
     },
     {
         path: "compromisso/listar",

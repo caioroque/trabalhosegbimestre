@@ -1,23 +1,23 @@
 <mat-grid-list cols="5" rowHeight="1:1" [gutterSize]="'16px'">
-    <mat-grid-tile *ngFor="let produto of produtos">
+    <mat-grid-tile *ngFor="let compromisso of compromisso">
         <mat-card>
             <img
                 mat-card-image
                 src="assets/images/sem-imagem.jpg"
-                alt="{{ produto.descricao }}"
+                alt="{{ compromisso.descricao }}"
             />
             <mat-card-content>
-                <mat-card-title>{{ produto.nome }}</mat-card-title>
-                <mat-card-subtitle>
-                    {{ produto.preco | currency: "BRL" }}
-                </mat-card-subtitle>
+                <mat-card-title>{{ compromisso.nome }}</mat-card-title>
+              <!--  <mat-card-subtitle>
+                    {{ compromisso.preco | currency: "BRL" }}
+                </mat-card-subtitle>-->
             </mat-card-content>
             <mat-card-actions>
                 <button
                     mat-stroked-button
                     color="warn"
                     mat-button
-                    (click)="adicionar(produto)"
+                    (click)="adicionar(compromisso)"
                 >
                     Adicionar
                 </button>

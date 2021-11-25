@@ -19,8 +19,13 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { AppComponent } from "./app.component";
 import { TemplateComponent } from "./components/template/template.component";
 import { IndexComponent } from './components/views/home/index/index.component';
-import { CadastrarCompromissoComponent } from "./components/views/produto/cadastrar-produto/cadastrar-produto.component";
-import { ListarcompromissoComponent } from "./components/views/produto/listar-produto/listar-compromisso.component";
+import { CadastrarCompromissoComponent } from "./components/views/compromisso/cadastrar-compromisso/cadastrar-compromisso.component";
+import { ListarcompromissoComponent } from "./components/views/compromisso/listar-compromisso/listar-compromisso.component";
+import { AlterarCompromissoComponent } from './components/views/compromisso/alterar-compromisso/alterar-compromisso.component';
+
+
+
+
 
 @NgModule({
     declarations: [
@@ -29,6 +34,8 @@ import { ListarcompromissoComponent } from "./components/views/produto/listar-pr
         ListarcompromissoComponent,
         TemplateComponent,
         IndexComponent,
+        AlterarCompromissoComponent,
+
     ],
     imports: [
         BrowserModule,
