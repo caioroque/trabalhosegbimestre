@@ -1,30 +1,6 @@
-### Cadastrar produto
-POST https://localhost:5001/api/produto/create
-Content-Type: application/json
-
-{
-    "Nome" : "Bolacha",
-    "Preco" : 3.5,
-    "Quantidade": 7,
-    "Descricao" : "Descrição do produto",
-    "CategoriaId" : 1
-}
-
-### Listar produtos
-GET https://localhost:5001/api/produto/list
-
-### Buscar produto pelo id
-GET https://localhost:5001/api/produto/getbyid/1
-
 ### Deletar produto pelo nome
-DELETE http://localhost:5000/api/compromisso/delete/Caio
+DELETE http://localhost:5000/api/compromisso/delete/OLGA ROQUE DA SILVA
 
-### Alterar o produto inteiro
-PUT https://localhost:5001/api/produto/update
-Content-Type: application/json
+### Deletar produto pelo Id
+DELETE http://localhost:5000/api/compromisso/deleteById/16
 
-{
-    "Id": 1,
-    "Nome" : "Bolacha alterada",
-    "Preco" : 3.5
-}

@@ -16,6 +16,8 @@ export class AlterarCompromissoComponent implements OnInit {
   descricao!: string;
   importancia!: Importancia[];
   importanciaId!: number;
+  compromissos!: Compromisso[];
+  compromissoId!: Number;
 
   constructor(
       private compromissoService: CompromissoService,
@@ -28,6 +30,11 @@ export class AlterarCompromissoComponent implements OnInit {
           this.importancia = importancias;
           console.table(importancias);
       });
+
+      this.compromissoService.list().subscribe((compromisso) => {
+        this.compromissos = compromisso;
+        console.table(compromisso);
+    });
   }
 
   alterar(): void {

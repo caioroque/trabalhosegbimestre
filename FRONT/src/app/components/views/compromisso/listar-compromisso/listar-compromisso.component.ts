@@ -14,8 +14,7 @@ export class ListarcompromissoComponent implements OnInit {
       "nome",
       "descricao",
       "importancia",
-      "alterar",
-      "excluir",
+      "vercompromisso",
   ];
 
   constructor(private service: CompromissoService) {}

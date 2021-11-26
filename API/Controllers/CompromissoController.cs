@@ -56,11 +56,7 @@ namespace API.Controllers
         [Route("delete/{name}")]
         public IActionResult Delete(string name)
         {
-            // Produto produto = _context.Produtos
-            //     .FirstOrDefault(produto => produto.CategoriaId == 3);
-            //Where -> Expressão lambda
-            //Buscar um objeto pelo nome
-            Compromisso compromisso = _context.Compromissos.FirstOrDefault(produto => produto.Nome == name);
+            Compromisso compromisso = _context.Compromissos.FirstOrDefault(compromisso => compromisso.Nome == name);
             if (compromisso == null)
             {
                 return NotFound();
@@ -69,6 +65,20 @@ namespace API.Controllers
             _context.SaveChanges();
             return Ok(_context.Compromissos.ToList());
         }
+
+        [Route("deleteById/{id}")]
+        [HttpDelete]
+        public IActionResult DeleteById(int id){
+            Compromisso compromisso = _context.Compromissos.FirstOrDefault(compromisso => compromisso.Id == id);
+            if (compromisso == null)
+            {
+                return NotFound();
+            }
+            _context.Compromissos.Remove(compromisso);
+            _context.SaveChanges();
+            return Ok(_context.Compromissos.ToList());
+        }
+
 
         //PUT: /api/compromisso/update
         [Route("update")]
