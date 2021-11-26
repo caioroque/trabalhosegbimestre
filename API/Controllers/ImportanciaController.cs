@@ -30,5 +30,17 @@ namespace API.Controllers
         [HttpGet]
         public IActionResult List() => Ok(_context.Importancias.ToList());
 
-    }
+        [Route("deleteById/{id}")]
+        [HttpDelete]
+        public IActionResult DeleteById(int id){
+            Importancia importancia = _context.Importancias.FirstOrDefault(importancia => importancia.Id == id);
+            if (importancia == null)
+            {
+                return NotFound();
+            }
+            _context.Importancias.Remove(importancia);
+            _context.SaveChanges();
+            return Ok(_context.Importancias.ToList());
+        }
+}
 }

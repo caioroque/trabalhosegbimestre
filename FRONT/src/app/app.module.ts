@@ -24,6 +24,7 @@ import { ListarcompromissoComponent } from "./components/views/compromisso/lista
 import { AlterarCompromissoComponent } from './components/views/compromisso/alterar-compromisso/alterar-compromisso.component';
 import { VerCompromissoComponent } from './components/views/compromisso/ver-compromisso/ver-compromisso.component';
 import { DeleteCompromissoComponent } from './components/views/compromisso/delete-compromisso/delete-compromisso.component';
+import { CadastrarUsuarioComponent } from './components/views/usuario/cadastrar-usuario/cadastrar-usuario.component';
 
 
 
@@ -39,6 +40,7 @@ import { DeleteCompromissoComponent } from './components/views/compromisso/delet
         AlterarCompromissoComponent,
         VerCompromissoComponent,
         DeleteCompromissoComponent,
+        CadastrarUsuarioComponent,
 
     ],
     imports: [
