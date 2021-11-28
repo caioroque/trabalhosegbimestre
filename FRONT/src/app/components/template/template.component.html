@@ -2,7 +2,7 @@
     <button (click)="sidenav.toggle()" mat-icon-button>
         <mat-icon>menu</mat-icon>
     </button>
-    <a class="title" mat-button routerLink=""> Agenda Eletrônica</a>
+    <a class="title" mat-button routerLink="compromisso/listar">Agenda Eletrônica</a>
 </mat-toolbar>
 
 <mat-sidenav-container class="container">
@@ -15,6 +15,10 @@
             <a mat-list-item routerLink="/compromisso/listar">
                 <mat-icon mat-list-icon>list</mat-icon>
                 Listar Compromissos</a
+            >
+            <a mat-list-item routerLink="/usuario/login">
+                <mat-icon mat-list-icon>account_circle</mat-icon>
+                Usuario</a
             >
         </mat-nav-list>
     </mat-sidenav>

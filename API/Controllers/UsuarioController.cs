@@ -40,7 +40,7 @@ namespace API.Controllers
                 return NotFound(new { message = "Usuário ou senha inválidos" });
             }
             usuario.Token = TokenService.CriarToken(usuario);
-            usuario.Senha = "";
+            //usuario.Senha = "";
             return Ok(usuario);
         }
 
@@ -72,6 +72,10 @@ namespace API.Controllers
         {
             return Ok(new { message = "Usuário administrador" });
         }
+
+        [Route("list")]
+        [HttpGet]
+        public IActionResult List() => Ok(_context.Usuarios.ToList());
 
     }
 }

@@ -1,6 +1,8 @@
+import { Usuario } from 'src/app/models/usuario';
 import { Component, OnInit } from '@angular/core';
 import { Compromisso } from 'src/app/models/compromisso';
 import { CompromissoService } from 'src/app/services/compromisso.service';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'app-listar-compromisso',
@@ -8,6 +10,7 @@ import { CompromissoService } from 'src/app/services/compromisso.service';
   styleUrls: ['./listar-compromisso.component.css']
 })
 export class ListarcompromissoComponent implements OnInit {
+  usuario: Usuario[] = [];
   fonteDados: Compromisso[] = [];
   colunasExibidas: String[] = [
       "id",
@@ -17,12 +20,19 @@ export class ListarcompromissoComponent implements OnInit {
       "vercompromisso",
   ];
 
-  constructor(private service: CompromissoService) {}
+  constructor(
+    private service: CompromissoService,
+    private usuarioService: UsuarioService,) {}
 
   ngOnInit(): void {
       this.service.list().subscribe((compromisso) => {
           this.fonteDados = compromisso;
       });
+
+      this.usuarioService.list().subscribe((usuario) => {
+        this.usuario = usuario;
+        console.table(usuario);
+    });
   }
 }
 

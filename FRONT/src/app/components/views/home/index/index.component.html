@@ -1,4 +1,5 @@
-<!--<mat-grid-list cols="5" rowHeight="1:1" [gutterSize]="'16px'">
+<!--
+<mat-grid-list cols="5" rowHeight="1:1" [gutterSize]="'16px'">
     <mat-grid-tile *ngFor="let compromisso of compromisso">
         <mat-card>
             <img
@@ -9,7 +10,7 @@
             <mat-card-content>
                 <mat-card-title>{{ compromisso.nome }}</mat-card-title>
                <mat-card-subtitle>
-                    {{ compromisso.preco | currency: "BRL" }}
+                    {{ compromisso.importancia!.nome }}
                 </mat-card-subtitle>
             </mat-card-content>
             <mat-card-actions>
@@ -19,38 +20,17 @@
                     mat-button
                     (click)="adicionar(compromisso)"
                 >
-                    Adicionar
+                    Ver
                 </button>
             </mat-card-actions>
         </mat-card>
     </mat-grid-tile>
-</mat-grid-list>
--->
+</mat-grid-list>-->
 
-<h3 class="text-center">Login</h3>
-
-<form class="form mt-4">
-
-    <div class="form-group">
-        <input 
-            class="form-control" 
-            placeholder="user name" 
-            autofocus>  
-    </div>
-
-    <div class="form-group">
-        <input
-            type="password" 
-            class="form-control" 
-            placeholder="password">              
-    </div>
-
-    <button 
-        type="submit" 
-        class="btn btn-primary btn-block">
-        login
-    </button>
-
-</form>
-
-<p>Not a user?<a>Register now</a></p>
+<!--
+<mat-card>
+    <button mat-raised-button color="primary" (click)="login()">Login</button>
+</mat-card>-->
+<mat-card>
+    <button mat-raised-button color="primary" (click)="cadastrar()">Cadastrar</button>
+</mat-card>

@@ -6,12 +6,22 @@ import { ListarcompromissoComponent } from "./components/views/compromisso/lista
 import { AlterarCompromissoComponent } from "./components/views/compromisso/alterar-compromisso/alterar-compromisso.component";
 import { VerCompromissoComponent } from "./components/views/compromisso/ver-compromisso/ver-compromisso.component";
 import { DeleteCompromissoComponent } from "./components/views/compromisso/delete-compromisso/delete-compromisso.component";
+import { CadastrarUsuarioComponent } from "./components/views/usuario/cadastrar-usuario/cadastrar-usuario.component";
+import { LoginComponent } from "./components/views/usuario/login/login.component";
 
 
 const routes: Routes = [
     {
         path: "",
         component: IndexComponent,
+    },
+    {
+        path: "usuario/login",
+        component: LoginComponent,
+    },
+    {
+        path: "usuario/cadastrar-usuario",
+        component: CadastrarUsuarioComponent,
     },
     {
         path: "compromisso/ver-compromisso",
